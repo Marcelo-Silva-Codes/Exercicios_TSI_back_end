@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+   function Mostrar(){
+        let produto = document.getElementById("produtos").value
+        let nome = document.getElementById("nomep").value
+        let descricao = document.getElementById("descp").value
+        let quantidade = document.getElementById("quantp").value
+        let radio1 = document.getElementById("eletro").Checked
+        let radio2 = document.getElementById("moveis").Checked
+
+        alert(produto)
+        alert(nome)
+        alert(descricao)
+        alert(quantidade)
+        alert(radio1)
+        alert(radio2)
+
+    }
+</script>
+<style>
+.form-container {
+      background-color: white;  /* Quadrado preto */
+      border: 2px solid black;
+      margin: 10px;
+      width: 300px;
+      padding: 10px;
+      
+      color: black; /* Cor do texto */
+      
+    }
+.esquerda{
+    text-align: right;
+}
+button {
+    background-color: blue;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+<div class="form-container">
+<h2> Cadastrar Produtos</h2>
+<hr>
+    <form action="" method="post">
+<label for="produtos"></label>
+ <div>
+  <select id="produtos" name="produtos">
+    <option value="Selecione a Categoria do Produto" selected>Selecione a Categoria do Produto</option>
+    <option value="1">Geladeira</option>
+   
+  </select>
+  <br>
+  <br>  
+
+  <input type="text" id="nomep" name="nomep" placeholder="Nome Produto"><br><br>
+  <input type="text" id="descp" name="descp" placeholder="Descrição Produto"><br><br>
+  <input type="text" id="quantp" name="quantp" placeholder="Quantidade Produto"><br><br>
+<hr>
+<legend>Tipo de Produto:</legend>
+    <input type="radio" id="eletro" name="eletro" value="eletro">
+      Eletrodomestico
+    </label>
+    <label>
+      <input type="radio" id="moveis" name="moveis" value="moveis">
+      Móveis
+    </label>
+    <button type="submit" onclick="Mostrar()">Cadastrar</button>
+</div>
+</form> 
+</div>
+
+</body>
+</html>
