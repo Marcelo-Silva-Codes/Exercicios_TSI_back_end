@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+    function verificarNota() {
+      let valor = parseInt(document.getElementById("nota").value);
+
+      if (valor >= 0 && valor <= 10) {
+        document.getElementById("aviso").innerHTML = "Insuficiente";
+      } else if (valor >= 11 && valor <= 14) {
+        document.getElementById("aviso").innerHTML = "Bom";
+      } else if (valor > 14) {
+        document.getElementById("aviso").innerHTML = "Muito Bom";
+      } else {
+        document.getElementById("aviso").innerHTML = "Valor inválido";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Digite sua nota:</h2>
+  <input type="text" id="nota">
+  <button onclick="verificarNota()">Verificar</button>
+  <p id="aviso" style="color:green;"></p>
+</body>
+</html>

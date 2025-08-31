@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function verificarNumero(){
+            let numero = parseInt(document.getElementById("valor").value);
+            if(isNaN(numero)){
+                alert("Valor inválido");
+            } else if(numero % 2 === 0){
+                alert("O número é "+numero+" par");
+            } else {
+                alert("O número é "+numero+" ímpar");
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <h2>Digite um número:</h2>
+  <input type="text" id="valor">
+  <button onclick="verificarNumero()">Verificar</button>
+
+</body>
+</html>
