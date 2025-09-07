@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function validarNumero(){   
+        let numero_teste = document.getElementById("numero").value;
+
+            if(isNaN(numero_teste) || numero_teste == ""){
+            alert("Por favor, insira um valor númerico válido.");
+            return false;
+            }
+            else{
+            return true;
+            }
+    }
+</script>
+
+</head>
+<body>
+    <form action="recebe_ex4.php" method="post" onsubmit="return validarNumero()">
+        Numero:
+        <input type="text" name="numero" id="numero">
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+</html>
