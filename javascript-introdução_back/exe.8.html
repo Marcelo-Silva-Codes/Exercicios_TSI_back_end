@@ -6,26 +6,39 @@
     <title>Document</title>
 
     <script>
-        let sexo1= prompt("Digite o sexo: ");
-        let altura1= prompt("Digite a altura: ");
-        let sexo2= prompt("Digite o sexo: ");
-        let altura2= prompt("Digite o altura: ");
 
-        let sexo1mod = parseInt(sexo1)
-        let altura1mod = parseInt(altura1)
-        let sexo2mod = parseInt(sexo2) 
-        let altura2mod = parseInt(altura2)
+        function validarSexo(Pessoa){
+            let sexo
+            do{
+                sexo = prompt("Digite o sexo da "+ Pessoa + "(1- para masculino 2- para feminino): ")
+            }while( sexo != "1" && sexo != "2")
+            return parseInt(sexo)
+        }
 
-        if(altura2mod > altura1mod){
-            alert("Altura 2 é maior")
+        function programaInicial(){
+        let altura1= parseFloat(prompt("Digite a altura da Pessoa 1 (em metros): "));
+        let sexo1 = validarSexo(1)
+
+        let altura2= parseFloat(prompt("Digite o altura da Pessoa 2 (em metros): "));
+        let sexo2 = validarSexo(2)
+        
+        let maiorAltura, sexoFinal
+        if(altura2 > altura1){
+            maiorAltura = altura2
+            sexoFinal= sexo2
         }
         else{
-            alert("Altura 1 maior")
+            maiorAltura = altura1
+            sexoFinal = sexo1
         }
 
+        let sexoEscrito = (sexoFinal == 1) ? "masculino" : "feminino";
+
+        alert("Maior altura é: "+maiorAltura+" ,cujo sexo é: "+ sexoEscrito)
 
 
-        
+    }
+     programaInicial();   
 
     </script>
 </head>

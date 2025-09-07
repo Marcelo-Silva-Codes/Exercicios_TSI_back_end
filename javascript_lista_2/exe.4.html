@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularMedia(){
+            let nome = document.getElementById("nome").value;
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let nota3 = parseFloat(document.getElementById("nota3").value);
+            let media = (nota1 + nota2 + nota3) / 3;
+            if(media >= 6){
+                alert("Aluno "+nome+" está aprovado com média igual a "+media.toFixed(2));
+            }
+            else{
+                alert("Aluno "+nome+" está reprovado com média igual a "+media.toFixed(2));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Digite seu nome e suas três notas:</h3>
+    <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+    <input type="text" id="nota1" placeholder="Digite sua 1º nota"><br><br>
+    <input type="text" id="nota2" placeholder="Digite sua 2º nota"><br><br>
+    <input type="text" id="nota3" placeholder="Digite sua 3º nota"><br><br>
+    <button onclick="calcularMedia()">Analisar</button>
+
+</body>
+</html>
