@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validarForms() {
+            let nome = document.getElementById("nome").value;
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let n3 = document.getElementById("n3").value;
+
+            if (nome == "" || n1 == "" || n2 == "" || n3 == "") {
+                alert("Todos os campos devem ser Preenchidos!");
+                return false;
+
+            }
+            if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 || n3 < 0 || n3 > 10) {
+                alert("As notas devem estar entre 0 e 10!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="recebe_ex6.php" method="get" onsubmit="return validarForms()">
+        Nome:
+        <input type="text" name="nome" id="nome"><br><br>
+        Nota 1:
+        <input type="text" name="n1" id="n1"><br><br>
+        Nota 2:
+        <input type="text" name="n2" id="n2"><br><br>
+        Nota 3:
+        <input type="text" name="n3" id="n3"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

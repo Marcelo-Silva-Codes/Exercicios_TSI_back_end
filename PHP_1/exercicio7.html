@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validarFormulario() {
+      let nome = document.getElementById("nome").value;
+      let email = document.getElementById("email").value;
+      let cpf = document.getElementById("cpf").value;
+      let bandeira = document.getElementById("bandeira").value;
+
+      if (nome === "" || email === "" || cpf === "" || bandeira === "") {
+        alert("Todos os campos devem ser preenchidos!");
+        return false;
+      }
+
+      let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regexEmail.test(email)) {
+        alert("Digite um e-mail válido!");
+        return false;
+      }
+
+      let regexCPF = /^\d{11}$/;
+      if (!regexCPF.test(cpf)) {
+        alert("CPF inválido! Digite apenas os 11 números.");
+        return false;
+      }
+
+      return true;
+    }
+    </script>
+</head>
+<body>
+    <form action="recebe_ex7.php" method="post" onsubmit="return validarFormulario()">
+        Nome:
+        <input type="text" name="nome" id="nome"><br><br>
+        Email:
+        <input type="text" name="email" id="email"><br><br>
+        CPF:
+        <input type="text" name="cpf" id="cpf" placeholder="Somente números"><br><br>
+        Bandeira do Cartão:
+        <select name="bandeira" id="bandeira">
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="elo">Elo</option>   
+        </select><br><br>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+</html>
+   
