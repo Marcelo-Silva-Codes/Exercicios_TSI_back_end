@@ -1,0 +1,4 @@
+Foi alterado a porta do conecta.php para a porta 3307. Porque a porta padrão(3306) esta sendo utilizada para o projeto de extensão.
+
+E no meu banco local tem senha, senha = 1.
+Caso a sua senha senha seja diferente é preciso trocar também. 
